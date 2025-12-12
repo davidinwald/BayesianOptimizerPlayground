@@ -1,0 +1,15 @@
+{
+  "kind": "oracle",
+  "name": "branin",
+  "label": "Branin Function",
+  "version": "1.0.0",
+  "engine_min_version": "0.1.0",
+  "description": "Classic 2D test function for optimization. Has 3 global minima. Domain: x1 ∈ [-5, 10], x2 ∈ [0, 15]",
+  "parameters": [],
+  "capabilities": {},
+  "a11y": {
+    "altText": "Branin function visualization"
+  },
+  "deterministic": true
+}
+

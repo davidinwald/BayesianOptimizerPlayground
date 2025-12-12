@@ -1,0 +1,29 @@
+{
+  "kind": "acquisition",
+  "name": "template",
+  "label": "Template Acquisition",
+  "version": "1.0.0",
+  "engine_min_version": "0.1.0",
+  "description": "Template acquisition plugin - copy this to create a new acquisition function",
+  "parameters": [
+    {
+      "key": "xi",
+      "label": "Exploration Parameter",
+      "type": "number",
+      "default": 0.01,
+      "bounds": {
+        "min": 0.0,
+        "max": 1.0
+      },
+      "help": "Controls exploration-exploitation tradeoff"
+    }
+  ],
+  "capabilities": {
+    "supports-batch": false
+  },
+  "a11y": {
+    "altText": "Acquisition function visualization"
+  },
+  "deterministic": true
+}
+

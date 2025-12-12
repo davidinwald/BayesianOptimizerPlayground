@@ -1,0 +1,15 @@
+{
+  "kind": "oracle",
+  "name": "template",
+  "label": "Template Oracle",
+  "version": "1.0.0",
+  "engine_min_version": "0.1.0",
+  "description": "Template oracle plugin - copy this to create a new objective function",
+  "parameters": [],
+  "capabilities": {},
+  "a11y": {
+    "altText": "Objective function visualization"
+  },
+  "deterministic": true
+}
+

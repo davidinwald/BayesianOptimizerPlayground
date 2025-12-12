@@ -1,0 +1,29 @@
+{
+  "kind": "acquisition",
+  "name": "ei",
+  "label": "Expected Improvement",
+  "version": "1.0.0",
+  "engine_min_version": "0.1.0",
+  "description": "Expected Improvement (EI) acquisition function. Balances exploration and exploitation by measuring the expected improvement over the current best value.",
+  "parameters": [
+    {
+      "key": "xi",
+      "label": "Exploration Parameter",
+      "type": "number",
+      "default": 0.01,
+      "bounds": {
+        "min": 0.0,
+        "max": 1.0
+      },
+      "help": "Controls exploration-exploitation tradeoff. Higher values favor exploration."
+    }
+  ],
+  "capabilities": {
+    "supports-batch": false
+  },
+  "a11y": {
+    "altText": "Expected Improvement acquisition function visualization"
+  },
+  "deterministic": true
+}
+

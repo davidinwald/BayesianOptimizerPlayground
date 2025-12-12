@@ -1,0 +1,16 @@
+{
+  "kind": "visualizer",
+  "name": "template",
+  "label": "Template Visualizer",
+  "version": "1.0.0",
+  "engine_min_version": "0.1.0",
+  "description": "Template visualizer plugin - copy this to create a new visualization",
+  "parameters": [],
+  "capabilities": {},
+  "a11y": {
+    "altText": "Template visualization",
+    "colorEncoding": "Blue for low values, red for high values"
+  },
+  "deterministic": true
+}
+

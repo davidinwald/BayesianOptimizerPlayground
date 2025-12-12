@@ -1,0 +1,38 @@
+{
+  "kind": "kernel",
+  "name": "rbf",
+  "label": "RBF Kernel",
+  "version": "1.0.0",
+  "engine_min_version": "0.1.0",
+  "description": "Radial Basis Function (RBF) kernel, also known as squared exponential or Gaussian kernel. Produces smooth, infinitely differentiable functions.",
+  "parameters": [
+    {
+      "key": "lengthscale",
+      "label": "Lengthscale",
+      "type": "number",
+      "default": 1.0,
+      "bounds": {
+        "min": 0.01,
+        "max": 10.0
+      },
+      "help": "Controls the smoothness of the function. Smaller values = more wiggly, larger = smoother."
+    },
+    {
+      "key": "variance",
+      "label": "Signal Variance",
+      "type": "number",
+      "default": 1.0,
+      "bounds": {
+        "min": 0.01,
+        "max": 10.0
+      },
+      "help": "Controls the magnitude/scale of the function values."
+    }
+  ],
+  "capabilities": {},
+  "a11y": {
+    "altText": "RBF kernel covariance visualization"
+  },
+  "deterministic": true
+}
+

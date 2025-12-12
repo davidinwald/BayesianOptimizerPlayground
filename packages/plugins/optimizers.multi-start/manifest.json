@@ -1,0 +1,38 @@
+{
+  "kind": "optimizer",
+  "name": "multi-start",
+  "label": "Multi-Start Local Search",
+  "version": "1.0.0",
+  "engine_min_version": "0.1.0",
+  "description": "Multi-start local search optimizer. Generates random starting points and performs local optimization using gradient-free method.",
+  "parameters": [
+    {
+      "key": "restarts",
+      "label": "Number of Restarts",
+      "type": "integer",
+      "default": 10,
+      "bounds": {
+        "min": 1,
+        "max": 100
+      },
+      "help": "Number of random starting points for local search"
+    },
+    {
+      "key": "maxIterations",
+      "label": "Max Iterations per Start",
+      "type": "integer",
+      "default": 50,
+      "bounds": {
+        "min": 10,
+        "max": 200
+      },
+      "help": "Maximum iterations for each local search"
+    }
+  ],
+  "capabilities": {},
+  "a11y": {
+    "altText": "Multi-start optimizer visualization"
+  },
+  "deterministic": false
+}
+

@@ -1,0 +1,38 @@
+{
+  "name": "Branin Function with EI",
+  "description": "Classic 2D test function optimized with Expected Improvement",
+  "domain": {
+    "dimensions": [
+      {
+        "type": "continuous",
+        "bounds": [-5, 10],
+        "name": "x1"
+      },
+      {
+        "type": "continuous",
+        "bounds": [0, 15],
+        "name": "x2"
+      }
+    ]
+  },
+  "oracle": "branin",
+  "kernel": "rbf",
+  "acquisition": "ei",
+  "optimizer": "multi-start",
+  "initialDesign": {
+    "method": "sobol",
+    "n": 5
+  },
+  "budget": 30,
+  "seed": 42,
+  "parameters": {
+    "kernel": {
+      "lengthscale": 1.0,
+      "variance": 1.0
+    },
+    "acquisition": {
+      "xi": 0.01
+    }
+  }
+}
+
