@@ -7,8 +7,8 @@ import type {
   Dataset,
   Posterior,
   RunContext,
-  SeededRNG,
 } from '../types';
+import { SeededRNG } from '../utils/rng';
 import { GaussianProcess, type KernelFunction } from '../gp';
 import { latinHypercubeSample } from '../utils';
 import type { Event } from '../events';
@@ -71,7 +71,7 @@ export class BORunner {
 
   constructor(config: BORunConfig) {
     this.config = config;
-    this.rng = new (require('../utils/rng').SeededRNG)(config.seed);
+    this.rng = new SeededRNG(config.seed);
 
     // Initialize dataset with initial design
     const initialX = this.generateInitialDesign();

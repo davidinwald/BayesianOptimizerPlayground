@@ -2,6 +2,8 @@
  * Plugin system types and interfaces
  */
 
+import type { Domain } from './domain';
+
 export type PluginKind = 'kernel' | 'acquisition' | 'oracle' | 'optimizer' | 'visualizer';
 
 export type ParameterType = 'number' | 'integer' | 'categorical' | 'boolean';
