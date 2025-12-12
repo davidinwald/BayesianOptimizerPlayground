@@ -10,7 +10,7 @@ import type {
 } from '@bo/engine';
 
 import manifestData from '../manifest.json';
-const manifest: PluginManifest = manifestData;
+const manifest: PluginManifest = manifestData as PluginManifest;
 
 export interface OracleOptions {
   withNoise?: boolean;
@@ -36,7 +36,11 @@ export function evaluate(
   rng?: SeededRNG
 ): OracleResult | OracleResult[] {
   // Normalize input
-  const points: number[][] = Array.isArray(x[0]) ? (x as number[][]) : [[x as number | number[]].flat() as number[]];
+  const points: number[][] = Array.isArray(x) && Array.isArray(x[0]) 
+    ? (x as number[][]) 
+    : Array.isArray(x) 
+      ? [x as number[]]
+      : [[x as number]];
 
   const results: OracleResult[] = [];
 

@@ -10,7 +10,7 @@ import type {
 } from '@bo/engine';
 
 import manifestData from '../manifest.json';
-const manifest: PluginManifest = manifestData;
+const manifest: PluginManifest = manifestData as PluginManifest;
 
 export interface MultiStartParameters {
   restarts: number;

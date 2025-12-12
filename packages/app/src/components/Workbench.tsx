@@ -123,7 +123,7 @@ export default function Workbench() {
         }
         
         animationFrameRef.current = requestAnimationFrame(() => {
-          const newPoints: Point[] = state.dataset.X.map((x, idx) => {
+          const newPoints: Point[] = state.dataset.X.map((x: number[], idx: number) => {
             const y = state.dataset.y[idx];
             const isNewBest = y === state.bestSoFar;
             const isLatest = idx === state.dataset.X.length - 1;
